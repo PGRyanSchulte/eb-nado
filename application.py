@@ -7,7 +7,7 @@ class MainHandler(tornado.web.RequestHandler):
         self.write("PG aws test")
 
 webApp = tornado.web.Application([
-    (r"/", MainHandler),
+    (r"/index", MainHandler),
 ])
 
 application = tornado.wsgi.WSGIAdapter(webApp)
